@@ -54,6 +54,56 @@ function validarFormulario() {
 
 ///// Ejercicio #7
 
+document.addEventListener("DOMContentLoaded", () => {
+    
+  document.getElementById("btnComentario").addEventListener("click", agregarComentario);
+  document.getElementById("btnImagen").addEventListener("click", agregarImagen);
+  document.getElementById("btnItem").addEventListener("click", agregarItem);
+});
+
+function agregarComentario() {
+  const texto = document.getElementById("inputComentario").value;
+  if (texto.trim() !== "") {
+    const comentario = document.createElement("p");
+    comentario.textContent = texto;
+    document.getElementById("comentarios-7").appendChild(comentario);
+    document.getElementById("inputComentario").value = ""; 
+  }
+}
+
+function agregarImagen() {
+  const url = document.getElementById("inputImagen").value;
+  if (url.trim() !== "") {
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = "Imagen agregada por el usuario";
+    img.style.width = "100px";
+    img.style.marginRight = "10px";
+    document.getElementById("galeria-7").appendChild(img);
+    document.getElementById("inputImagen").value = ""; 
+  }
+}
+
+function agregarItem() {
+  const texto = document.getElementById("inputItem").value;
+  if (texto.trim() !== "") {
+    const item = document.createElement("li");
+    item.textContent = texto;
+    document.getElementById("lista-7").appendChild(item);
+    document.getElementById("inputItem").value = ""; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 ///// Ejercicio #13
 
 function sumar() {
