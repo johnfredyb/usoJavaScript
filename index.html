@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Ejercicios JavaScript</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+
 
 </head>
 
@@ -32,6 +32,13 @@
                 <li><a href="#ej16"># 16</a></li>
                 <li><a href="#ej17"># 17</a></li>
                 <li><a href="#ej18"># 18</a></li>
+
+                <li><a href="#ej19"># 19</a></li>
+                <li><a href="#ej20"># 20</a></li>
+                <li><a href="#ej21"># 21</a></li>
+
+                <li><a href="#ej24"># 24</a></li>
+
                 <!-- hasta ejercicio 30 -->
             </ul>
         </nav>
@@ -82,16 +89,18 @@
             <h2>Ejercicio #2</h2>
             <div class="contenedor">
                 <div class="columna ejercicio">
-                    <h2>Ejercicio</h2>
-                    <p>Presentar el ejercicio aqui.</p>
+                    <h2>Ejercicio 2</h2>
+                    <section>
+                        <div id="caja-diego">¡Pasa el mouse o haz clic!</div>
+                    </section>
                 </div>
                 <div class="columna html">
                     <h2>HTML</h2>
-                    <p> Imagen con el html aqui.</p>
+                    <img src="img/ejercicio2.png" alt="html ejercicio2">
                 </div>
                 <div class="columna js">
                     <h2>JavaScript</h2>
-                    <p> Imagen del codigo JavaScript</p>
+                    <img src="img/ejercicio2js.png" alt="html ejercicio2">
                 </div>
             </div>
         </section>
@@ -142,6 +151,38 @@
                 <div class="columna js">
                     <h2>JavaScript</h2>
                     <img src="img/js13.png" alt="js ejercicio13">
+                  </div>
+            </div>
+        </section>
+
+        <!-- Ejercicio 6 -->
+        <section id="ej6" class="seccion">
+            <h2>Ejercicio #6</h2>
+            <div class="contenedor">
+                <div class="columna ejercicio5">
+                    <h2>Ejercicio 6</h2>
+                    <p>Mostrar lista de productos.</p>
+                    <ul id="productos"></ul>
+                    <h4>Añadir un nuevo producto</h4>
+                    <input type="text" id="productoEje6" placeholder="Tomates">
+                    <button onclick="añadirProducto()">Añadir</button>
+                    <button id="limpiarPBtnEje6">Limpiar lista de productos</button>
+
+                    <p>Mostrar comentarios almacenados.</p>
+                    <ul id="comentarios"></ul>
+                    <h4>Escribir un nuevo comentario</h4>
+                    <input type="text" id="comentarioEje6" placeholder="Hola!!!">
+                    <button onclick="publicarComentario()">Publicar</button>
+                    <button id="limpiarCBtnEje6">Limpiar lista de comentarios</button>
+
+                </div>
+                <div class="columna html">
+                    <h2>HTML</h2>
+                    <img src="img/html eje6.png" alt="html ejercicio6">
+                </div>
+                <div class="columna js">
+                    <h2>JavaScript</h2>
+                    <img src="img/js eje6.png" alt="js ejercicio6">
                 </div>
             </div>
         </section>
@@ -162,6 +203,60 @@
                 <div class="columna js">
                     <h2>JavaScript</h2>
                     <img src="img/js18.png" alt="js ejercicio13">
+                  </div>
+            </div>
+        </section>
+
+        <!-- Ejercicio 21 -->
+        <section id="ej21" class="seccion">
+            <h2>Ejercicio #21</h2>
+            <div class="contenedor">
+                <div class="columna ejercicio">
+                    <h2>Ejercicio </h2>
+                    <p>Mostrar clima actual.</p>
+                    <h1 id="clima">28 °C</h1> <!-- Temperatura Placeholder -->
+                    <h4> Ciudad:</h4>
+                    <label for="c_label">Elija una Ciudad:</label>
+                    <select id="ciudades" name="ciudades">
+                        <option value="cucuta" selected>Cúcuta</option>
+                        <option value="bucaramanga">Bucaramanga</option>
+                        <option value="bogota">Bogota</option>
+                        <option value="medellin">Medellin</option>
+                        <option value="barranquilla">Barranquilla</option>
+                        <option value="cali">Cali</option>
+                    </select>
+
+                    <p>Obtener lista de usuarios.</p>
+                    <button onclick="generarUsuarios()">Generar Usuarios</button>
+                    <ul id="usuarios"></ul>
+                </div>
+                <div class="columna html">
+                    <h2>HTML</h2>
+                    <img src="img/html eje21.png" alt="html ejercicio21">
+                </div>
+                <div class="columna js">
+                    <h2>JavaScript</h2>
+                    <img src="img/js eje21.png" alt="js ejercicio21">
+                  </div>
+            </div>
+        </section>
+        <!-- Ejercicio 24 -->
+        <section id="ej24" class="seccion">
+            <h2>Ejercicio #24</h2>
+
+            <div class="contenedor">
+                <div class="columna ejercicio">
+                    <h2>Ejercicio 24</h2>
+                    <h2>Da click en la imagen para ver un gato nuevo</h2>
+                    <img id="imagen-diego" src="img/img1.jpg" alt="Imagen 1">
+                </div>
+                <div class="columna html">
+                    <h2>HTML</h2>
+                    <img src="img/ejercicio24.png" alt="html ejercicio24">
+                </div>
+                <div class="columna js">
+                    <h2>JavaScript</h2>
+                    <img src="img/ejercicio24js.png" alt="html ejercicio24">
                 </div>
             </div>
         </section>
