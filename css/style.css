@@ -154,6 +154,8 @@ img {
     transform: scale(1.05);
   }
 
+
+  /* Ejercicio 7 */
   .ej7{ font-family: Arial; margin: 20px; }
   #comentarios-7, #galeria-7, #lista-7 { margin-top: 20px; }
   .columna.ejercicio7 {
@@ -179,6 +181,35 @@ img {
 }
 
 .columna.ejercicio7 input.error {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+/* Ejercicio 28 */
+ej7{ font-family: Arial; margin: 20px; }
+  .columna.ejercicio28 {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.columna.columna.ejercicio28.modo-oscuro {
+    background-color: #222;
+    color: #eee;
+}
+
+.columna.columna.ejercicio28 input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.columna.columna.ejercicio28 input.error {
     border-color: red;
     background-color: #ffe6e6;
 }

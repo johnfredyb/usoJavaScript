@@ -95,6 +95,7 @@ function agregarItem() {
 }
 
 
+<<<<<<< Updated upstream
 
 
 
@@ -234,6 +235,8 @@ function mostrarAlert() {
   }, 3000);
 }
 
+=======
+>>>>>>> Stashed changes
 ///// Ejercicio #24
 const imagen = document.getElementById("imagen-diego");
 
@@ -248,3 +251,20 @@ imagen.addEventListener("click", () => {
   indice = (indice + 1) % imagenes.length;
   imagen.src = imagenes[indice];
 });
+
+
+//// Ejercicio #28
+
+const passwordInput = document.getElementById("password");
+const toggleIcon = document.getElementById("togglePassword");
+
+toggleIcon.addEventListener("click", () => {
+  const isPassword = passwordInput.type === "password";
+  passwordInput.type = isPassword ? "text" : "password";
+  toggleIcon.textContent = isPassword ? "🙈" : "👁️";
+});
+
+
+
+
+
