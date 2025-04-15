@@ -95,7 +95,7 @@ function agregarItem() {
 }
 
 
-<<<<<<< Updated upstream
+
 
 
 
@@ -235,8 +235,7 @@ function mostrarAlert() {
   }, 3000);
 }
 
-=======
->>>>>>> Stashed changes
+
 ///// Ejercicio #24
 const imagen = document.getElementById("imagen-diego");
 
