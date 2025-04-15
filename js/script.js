@@ -52,6 +52,21 @@ function validarFormulario() {
 
 ///// Ejercicio #6
 
+///// Ejercicio #7
+
+///// Ejercicio #13
+
+function sumar() {
+  const num1 = Number(document.getElementById("num1Franklin").value);
+  const num2 = Number(document.getElementById("num2Franklin").value);
+  const resultado = num1 + num2;
+  document.getElementById("resultadoSumaFranklin").innerText =
+    "Resultado: " + resultado;
+}
+
+
+///// Ejercicio #6
+
 // Lista de productos usando ciclo for
 const listaProductos = document.getElementById("productos");
 let productos = ["Manzana Verde", "Papa Amarilla", "Arroz", "Papa Pastusa"]
@@ -161,11 +176,20 @@ function generarUsuarios() {
 
 ///// Ejercicio #7
 
+///// Ejercicio #18
+
+function mostrarAlert() {
+  setTimeout(function () {
+      const alerta = alert("Este es un mensaje de alerta");
+  }, 3000);
+}
+
 ///// Ejercicio #24
 const imagen = document.getElementById("imagen-diego");
 
 //Listado de imagenes con su respectiva ruta
 const imagenes = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpeg"];
+
 
 let indice = 0;
 
