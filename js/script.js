@@ -94,8 +94,28 @@ function agregarItem() {
   }
 }
 
-
-
+///// Ejercicio #10
+function verificar10() {
+  const edad10 = parseInt(document.getElementById("edad10").value);
+  const cliente10 = document.getElementById("cliente10").value;
+  let mensaje = "";
+ 
+  if (edad10 >= 18) {
+    mensaje += "✅ Acceso permitido.<br>";
+  } else {
+    mensaje += "❌ Acceso denegado.<br>";
+  }
+  
+  if (cliente10 === "premium") {
+    mensaje += " Descuento del 20% aplicado.";
+  } else if (cliente10 === "regular") {
+    mensaje += " Descuento del 10% aplicado.";
+  } else {
+    mensaje += " No aplica descuento.";
+  }
+  
+  document.getElementById("resultado10").innerHTML = mensaje;
+}
 
 
 

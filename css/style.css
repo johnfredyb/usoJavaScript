@@ -213,3 +213,29 @@ ej7{ font-family: Arial; margin: 20px; }
     border-color: red;
     background-color: #ffe6e6;
 }
+
+/* Ejercicio 10*/
+
+.columna.ejercicio10, .js10, .html10 {
+    background-color: cadetblue; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+ 
+  #ej10 button {
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #ej10 button:hover {
+    background-color: #218838; 
+  }
