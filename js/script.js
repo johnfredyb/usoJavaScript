@@ -1,4 +1,8 @@
 ///// Ejercicio #1
+function cambiarTexto() {
+  const titulo = document.getElementById("titulo");
+  titulo.textContent = "Bienvenido de nuevo";
+}
 
 ///// Ejercicio #2
 const caja = document.getElementById("caja-diego");
@@ -270,6 +274,32 @@ imagen.addEventListener("click", () => {
   indice = (indice + 1) % imagenes.length;
   imagen.src = imagenes[indice];
 });
+
+///// Ejercicio #25
+const imageness= [
+  "./img/1.jpg",
+  "./img/2.gif",
+  "./img/3.webp",
+  "./img/4.jpg",
+];
+
+let indiceActual = 0;
+
+function mostrarImagen() {
+  const img = document.getElementById("imagen");
+  img.src = imagenes[indiceActual];
+}
+
+function siguiente() {
+  indiceActual = (indiceActual + 1) % imagenes.length;
+  mostrarImagen();
+}
+
+function anterior() {
+  indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+  mostrarImagen();
+}
+
 
 
 //// Ejercicio #28
