@@ -287,7 +287,7 @@ let indiceActual = 0;
 
 function mostrarImagen() {
   const img = document.getElementById("imagen");
-  img.src = imagenes[indiceActual];
+  img.src = imageness[indiceActual];
 }
 
 function siguiente() {
