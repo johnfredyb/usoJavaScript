@@ -24,6 +24,45 @@ caja.addEventListener("click", () => {
 ///// Ejercicio #3
 
 ///// Ejercicio #4
+document.addEventListener("DOMContentLoaded", function () {
+  // Evento de clic
+  const botonAlerta = document.getElementById("boton-alerta");
+  botonAlerta.addEventListener("click", function () {
+    alert("¡Has hecho clic en el botón!");
+  });
+
+  // Evento de teclado
+  const campoTeclado = document.getElementById("campo-teclado");
+  const mensajeTeclas = document.getElementById("mensaje-teclas");
+
+  campoTeclado.addEventListener("keydown", function (evento) {
+    mensajeTeclas.textContent = `Presionaste la tecla: ${evento.key} (Código: ${evento.code})`;
+  });
+
+  // Eventos de mouse
+  const areaRaton = document.getElementById("area-raton");
+  const estadoRaton = document.getElementById("estado-raton");
+
+  areaRaton.addEventListener("mouseover", function () {
+    estadoRaton.textContent = "El ratón está sobre el área";
+    areaRaton.style.backgroundColor = "#a0d8ef";
+  });
+
+  areaRaton.addEventListener("mouseout", function () {
+    estadoRaton.textContent = "El ratón salió del área";
+    areaRaton.style.backgroundColor = "#e0e0e0";
+  });
+
+  areaRaton.addEventListener("mousedown", function () {
+    estadoRaton.textContent = "Botón del ratón presionado";
+    areaRaton.style.backgroundColor = "#80c0d0";
+  });
+
+  areaRaton.addEventListener("mouseup", function () {
+    estadoRaton.textContent = "Botón del ratón liberado";
+    areaRaton.style.backgroundColor = "#a0d8ef";
+  });
+});
 
 ///// Ejercicio #5
 
@@ -55,8 +94,9 @@ function validarFormulario() {
 ///// Ejercicio #7
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-  document.getElementById("btnComentario").addEventListener("click", agregarComentario);
+  document
+    .getElementById("btnComentario")
+    .addEventListener("click", agregarComentario);
   document.getElementById("btnImagen").addEventListener("click", agregarImagen);
   document.getElementById("btnItem").addEventListener("click", agregarItem);
 });
@@ -67,7 +107,7 @@ function agregarComentario() {
     const comentario = document.createElement("p");
     comentario.textContent = texto;
     document.getElementById("comentarios-7").appendChild(comentario);
-    document.getElementById("inputComentario").value = ""; 
+    document.getElementById("inputComentario").value = "";
   }
 }
 
@@ -80,7 +120,7 @@ function agregarImagen() {
     img.style.width = "100px";
     img.style.marginRight = "10px";
     document.getElementById("galeria-7").appendChild(img);
-    document.getElementById("inputImagen").value = ""; 
+    document.getElementById("inputImagen").value = "";
   }
 }
 
@@ -90,7 +130,7 @@ function agregarItem() {
     const item = document.createElement("li");
     item.textContent = texto;
     document.getElementById("lista-7").appendChild(item);
-    document.getElementById("inputItem").value = ""; 
+    document.getElementById("inputItem").value = "";
   }
 }
 
@@ -99,13 +139,13 @@ function verificar10() {
   const edad10 = parseInt(document.getElementById("edad10").value);
   const cliente10 = document.getElementById("cliente10").value;
   let mensaje = "";
- 
+
   if (edad10 >= 18) {
     mensaje += "✅ Acceso permitido.<br>";
   } else {
     mensaje += "❌ Acceso denegado.<br>";
   }
-  
+
   if (cliente10 === "premium") {
     mensaje += " Descuento del 20% aplicado.";
   } else if (cliente10 === "regular") {
@@ -113,17 +153,9 @@ function verificar10() {
   } else {
     mensaje += " No aplica descuento.";
   }
-  
+
   document.getElementById("resultado10").innerHTML = mensaje;
 }
-
-
-
-
-
-
-
-
 
 ///// Ejercicio #13
 
@@ -135,17 +167,16 @@ function sumar() {
     "Resultado: " + resultado;
 }
 
-
 ///// Ejercicio #6
 
 // Lista de productos usando ciclo for
 const listaProductos = document.getElementById("productos");
-let productos = ["Manzana Verde", "Papa Amarilla", "Arroz", "Papa Pastusa"]
+let productos = ["Manzana Verde", "Papa Amarilla", "Arroz", "Papa Pastusa"];
 cargarProductos();
 
 // Cargar los productos
 function cargarProductos() {
-  listaProductos.innerHTML = ""
+  listaProductos.innerHTML = "";
   for (let i = 0; i < productos.length; i++) {
     const li = document.createElement("li");
     li.textContent = productos[i];
@@ -165,20 +196,24 @@ function añadirProducto() {
 
 // Limpiar lista de productos
 document.getElementById("limpiarPBtnEje6").addEventListener("click", () => {
-  listaProductos.innerHTML = ""
+  listaProductos.innerHTML = "";
   productos.length = 0;
 });
 
-
 // Lista de comentario usando forEach
 const listaComentarios = document.getElementById("comentarios");
-let comentarios = ["¿Como estas?", "Me alegro mucho de verte", "No me gusto", "Esperaba más"];
+let comentarios = [
+  "¿Como estas?",
+  "Me alegro mucho de verte",
+  "No me gusto",
+  "Esperaba más",
+];
 cargarComentarios();
 
 // Cargar los comentarios
 function cargarComentarios() {
-  listaComentarios.innerHTML = ""
-  comentarios.forEach(comentario => {
+  listaComentarios.innerHTML = "";
+  comentarios.forEach((comentario) => {
     const li = document.createElement("li");
     li.textContent = comentario;
     listaComentarios.appendChild(li);
@@ -197,7 +232,7 @@ function publicarComentario() {
 
 // Limpiar lista de comentarios
 document.getElementById("limpiarCBtnEje6").addEventListener("click", () => {
-  listaComentarios.innerHTML = ""
+  listaComentarios.innerHTML = "";
   comentarios.length = 0;
 });
 
@@ -210,29 +245,31 @@ function obtenerClimaActual(ciudad) {
   const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${ciudad}`;
   const clima = document.getElementById("clima");
   fetch(API_URL)
-    .then(response => response.json())
-    .then(data => clima.textContent = data.current.temp_c)
-    .catch(error => console.error('Error:', error));
+    .then((response) => response.json())
+    .then((data) => (clima.textContent = data.current.temp_c))
+    .catch((error) => console.error("Error:", error));
 }
 
 // Elegir otra ciudad
-const ciudades = document.getElementById('ciudades');
+const ciudades = document.getElementById("ciudades");
 
-ciudades.addEventListener('change', function () {
+ciudades.addEventListener("change", function () {
   const ciudad = ciudades.value;
-  obtenerClimaActual(ciudad)
+  obtenerClimaActual(ciudad);
 });
 
 // Obtener lista de usuarios desde JSON
 
-const listaUsuarios = document.getElementById('usuarios');
+const listaUsuarios = document.getElementById("usuarios");
 function generarUsuarios() {
-  const API_URL = "https://randomuser.me/api/?results=7"
+  const API_URL = "https://randomuser.me/api/?results=7";
   fetch(API_URL)
-    .then(res => res.json())
-    .then(data => {
-      listaUsuarios.innerHTML = "" //Se deja dentro del Fetch por que a veces genera el doble de usuarios al darle varias veces
-      const nombres = data.results.map(user => `${user.name.first} ${user.name.last}`);
+    .then((res) => res.json())
+    .then((data) => {
+      listaUsuarios.innerHTML = ""; //Se deja dentro del Fetch por que a veces genera el doble de usuarios al darle varias veces
+      const nombres = data.results.map(
+        (user) => `${user.name.first} ${user.name.last}`
+      );
       for (let i = 0; i < nombres.length; i++) {
         const li = document.createElement("li");
         li.textContent = nombres[i];
@@ -240,8 +277,6 @@ function generarUsuarios() {
       }
     });
 }
-
-
 
 ///// Ejercicio #6
 
@@ -251,17 +286,98 @@ function generarUsuarios() {
 
 function mostrarAlert() {
   setTimeout(function () {
-      const alerta = alert("Este es un mensaje de alerta");
+    const alerta = alert("Este es un mensaje de alerta");
   }, 3000);
 }
 
+///// Ejercicio #20
+document.addEventListener("DOMContentLoaded", function () {
+  // Elementos del DOM
+  const nombreInput = document.getElementById("nombre-usuario");
+  const guardarNombreBtn = document.getElementById("guardar-nombre");
+  const mostrarNombreBtn = document.getElementById("mostrar-nombre");
+  const eliminarNombreBtn = document.getElementById("eliminar-nombre");
+  const saludoUsuario = document.getElementById("saludo-usuario");
+
+  const selectorTema = document.getElementById("selector-tema");
+  const guardarTemaBtn = document.getElementById("guardar-tema");
+  const mensajeTema = document.getElementById("mensaje-tema");
+
+  // Cargar preferencias al iniciar
+  cargarPreferencias();
+
+  // 1. Manejo del nombre de usuario
+  guardarNombreBtn.addEventListener("click", function () {
+    const nombre = nombreInput.value.trim();
+    if (nombre) {
+      localStorage.setItem("nombreUsuario", nombre);
+      alert(`Nombre "${nombre}" guardado correctamente`);
+    } else {
+      alert("Por favor ingresa un nombre válido");
+    }
+  });
+
+  mostrarNombreBtn.addEventListener("click", function () {
+    const nombreGuardado = localStorage.getItem("nombreUsuario");
+    if (nombreGuardado) {
+      saludoUsuario.textContent = `¡Hola ${nombreGuardado}! Bienvenido de nuevo.`;
+    } else {
+      saludoUsuario.textContent = "No hay ningún nombre guardado.";
+    }
+  });
+
+  eliminarNombreBtn.addEventListener("click", function () {
+    localStorage.removeItem("nombreUsuario");
+    saludoUsuario.textContent = "Nombre eliminado correctamente.";
+    nombreInput.value = "";
+  });
+
+  // 2. Manejo del tema preferido
+  guardarTemaBtn.addEventListener("click", function () {
+    const temaSeleccionado = selectorTema.value;
+    localStorage.setItem("temaPreferido", temaSeleccionado);
+    mensajeTema.textContent = `Preferencia de tema "${temaSeleccionado}" guardada.`;
+
+    // Aplicar el tema inmediatamente
+    aplicarTema(temaSeleccionado);
+  });
+
+  // Función para cargar preferencias al iniciar
+  function cargarPreferencias() {
+    // Cargar nombre si existe
+    const nombreGuardado = localStorage.getItem("nombreUsuario");
+    if (nombreGuardado) {
+      nombreInput.value = nombreGuardado;
+    }
+
+    // Cargar tema si existe
+    const temaGuardado = localStorage.getItem("temaPreferido");
+    if (temaGuardado) {
+      selectorTema.value = temaGuardado;
+      aplicarTema(temaGuardado);
+      mensajeTema.textContent = `Tema "${temaGuardado}" cargado automáticamente.`;
+    }
+  }
+
+  // Función para aplicar el tema seleccionado
+  function aplicarTema(tema) {
+    // Remover clases de tema anteriores
+    document.body.classList.remove("tema-oscuro", "tema-azul");
+
+    // Aplicar nuevo tema
+    if (tema === "oscuro") {
+      document.body.classList.add("tema-oscuro");
+    } else if (tema === "azul") {
+      document.body.classList.add("tema-azul");
+    }
+  }
+});
 
 ///// Ejercicio #24
 const imagen = document.getElementById("imagen-diego");
 
 //Listado de imagenes con su respectiva ruta
 const imagenes = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpeg"];
-
 
 let indice = 0;
 
@@ -270,7 +386,6 @@ imagen.addEventListener("click", () => {
   indice = (indice + 1) % imagenes.length;
   imagen.src = imagenes[indice];
 });
-
 
 //// Ejercicio #28
 
@@ -282,8 +397,3 @@ toggleIcon.addEventListener("click", () => {
   passwordInput.type = isPassword ? "text" : "password";
   toggleIcon.textContent = isPassword ? "🙈" : "👁️";
 });
-
-
-
-
-

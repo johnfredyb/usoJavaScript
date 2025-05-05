@@ -1,241 +1,385 @@
 /* Estilo general */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 header {
-    background-color: #6c8ebf;
-    padding: 20px;
-    color: white;
-    text-align: center;
+  background-color: #6c8ebf;
+  padding: 20px;
+  color: white;
+  text-align: center;
 }
 .nav-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    gap: 5px;
-    padding: 0;
-    list-style: none;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .nav-grid li a {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.nav-grid li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
 
 main {
-    padding: 30px;
+  padding: 30px;
 }
 
 /* Estilos por sección */
 
-.seccion:nth-of-type(1) { background-color: #e7f0f7;}
-.seccion:nth-of-type(2) { background-color: #fef3e2;}
-.seccion:nth-of-type(3) { background-color: #f3e8f1;}
-.seccion:nth-of-type(4) { background-color: #e5f7ef;}
-.seccion:nth-of-type(5) { background-color: #fff6e5;}
-.seccion:nth-of-type(6) { background-color: #ede7f6;}
-.seccion:nth-of-type(7) { background-color: #e0f2f1;}
-.seccion:nth-of-type(8) { background-color: #fce4ec;}
-.seccion:nth-of-type(9) { background-color: #f3f7d9;}
-.seccion:nth-of-type(10) { background-color: #fbe9e7;}
-.seccion:nth-of-type(11) { background-color: #f1f8e9;}
-.seccion:nth-of-type(12) { background-color: #edeef7;}
-.seccion:nth-of-type(13) { background-color: #e0f7fa;}
-.seccion:nth-of-type(14) { background-color: #f9fbe7;}
-.seccion:nth-of-type(15) { background-color: #fcefd9;}
-.seccion:nth-of-type(16) { background-color: #e7f0f7;}
-.seccion:nth-of-type(17) { background-color: #fef3e2;}
-.seccion:nth-of-type(18) { background-color: #f3e8f1;}
+.seccion:nth-of-type(1) {
+  background-color: #e7f0f7;
+}
+.seccion:nth-of-type(2) {
+  background-color: #fef3e2;
+}
+.seccion:nth-of-type(3) {
+  background-color: #f3e8f1;
+}
+.seccion:nth-of-type(4) {
+  background-color: #e5f7ef;
+}
+.seccion:nth-of-type(5) {
+  background-color: #fff6e5;
+}
+.seccion:nth-of-type(6) {
+  background-color: #ede7f6;
+}
+.seccion:nth-of-type(7) {
+  background-color: #e0f2f1;
+}
+.seccion:nth-of-type(8) {
+  background-color: #fce4ec;
+}
+.seccion:nth-of-type(9) {
+  background-color: #f3f7d9;
+}
+.seccion:nth-of-type(10) {
+  background-color: #fbe9e7;
+}
+.seccion:nth-of-type(11) {
+  background-color: #f1f8e9;
+}
+.seccion:nth-of-type(12) {
+  background-color: #edeef7;
+}
+.seccion:nth-of-type(13) {
+  background-color: #e0f7fa;
+}
+.seccion:nth-of-type(14) {
+  background-color: #f9fbe7;
+}
+.seccion:nth-of-type(15) {
+  background-color: #fcefd9;
+}
+.seccion:nth-of-type(16) {
+  background-color: #e7f0f7;
+}
+.seccion:nth-of-type(17) {
+  background-color: #fef3e2;
+}
+.seccion:nth-of-type(18) {
+  background-color: #f3e8f1;
+}
 
 .seccion {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 /* Contenedor de columnas */
 .contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
 }
 
 .columna {
-    flex: 1;
-    min-width: 250px;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .columna h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 code {
-    display: block;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
+  display: block;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Apartir de este punto agregar el estilo para cada sección*/
 
+/* Estilos para el ejercicio 4 */
+#ej4 button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#ej4 button:hover {
+  background-color: #45a049;
+}
+
+#ej4 input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 5px 0 15px;
+}
+
+#ej4 #mensaje-teclas,
+#ej4 #estado-raton {
+  font-weight: bold;
+  color: #333;
+  min-height: 20px;
+}
+
+#ej4 #area-raton {
+  width: 200px;
+  height: 100px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
 /* Agrego estilo a la columna del ejercicio 5*/
 .columna.ejercicio5 {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background-color: white;
-    color: #333;
-    transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 .columna.ejercicio5.modo-oscuro {
-    background-color: #222;
-    color: #eee;
+  background-color: #222;
+  color: #eee;
 }
 
 .columna.ejercicio5 input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .columna.ejercicio5 input.error {
-    border-color: red;
-    background-color: #ffe6e6;
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+/* Estilos para el ejercicio 20 */
+#ej20 button {
+  padding: 8px 12px;
+  margin: 5px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#ej20 button:hover {
+  background-color: #3949ab;
+}
+
+#ej20 input,
+#ej20 select {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#ej20 #saludo-usuario,
+#ej20 #mensaje-tema {
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 24px;
+}
+
+/* Estilos para los temas */
+.tema-oscuro {
+  background-color: #333;
+  color: #fff;
+}
+
+.tema-oscuro .seccion {
+  background-color: #444;
+}
+
+.tema-oscuro .columna {
+  background-color: #555;
+  color: #eee;
+}
+
+.tema-azul {
+  background-color: #e3f2fd;
+}
+
+.tema-azul .seccion {
+  background-color: #bbdefb;
+}
+
+.tema-azul .columna {
+  background-color: #90caf9;
 }
 
 /* Ejercicio 2 */
 #caja-diego {
-    width: 300px;
-    height: 150px;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
+  width: 300px;
+  height: 150px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
 /* Ejercicio 24 */
 #imagen-diego {
-    width: 300px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  #imagen-diego:hover {
-    transform: scale(1.05);
-  }
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+#imagen-diego:hover {
+  transform: scale(1.05);
+}
 
-  /* Ejercicio 7 */
-  .ej7{ font-family: Arial; margin: 20px; }
-  #comentarios-7, #galeria-7, #lista-7 { margin-top: 20px; }
-  .columna.ejercicio7 {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background-color: white;
-    color: #333;
-    transition: all 0.3s ease;
+/* Ejercicio 7 */
+.ej7 {
+  font-family: Arial;
+  margin: 20px;
+}
+#comentarios-7,
+#galeria-7,
+#lista-7 {
+  margin-top: 20px;
+}
+.columna.ejercicio7 {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 .columna.ejercicio7.modo-oscuro {
-    background-color: #222;
-    color: #eee;
+  background-color: #222;
+  color: #eee;
 }
 
 .columna.ejercicio7 input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .columna.ejercicio7 input.error {
-    border-color: red;
-    background-color: #ffe6e6;
+  border-color: red;
+  background-color: #ffe6e6;
 }
 
 /* Ejercicio 28 */
-ej7{ font-family: Arial; margin: 20px; }
-  .columna.ejercicio28 {
-    font-family: Arial, sans-serif;
-    padding: 30px;
-    background-color: white;
-    color: #333;
-    transition: all 0.3s ease;
+ej7 {
+  font-family: Arial;
+  margin: 20px;
+}
+.columna.ejercicio28 {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 .columna.columna.ejercicio28.modo-oscuro {
-    background-color: #222;
-    color: #eee;
+  background-color: #222;
+  color: #eee;
 }
 
 .columna.columna.ejercicio28 input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .columna.columna.ejercicio28 input.error {
-    border-color: red;
-    background-color: #ffe6e6;
+  border-color: red;
+  background-color: #ffe6e6;
 }
 
 /* Ejercicio 10*/
 
-.columna.ejercicio10, .js10, .html10 {
-    background-color: cadetblue; 
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-  
- 
-  #ej10 button {
-    background-color: #28a745; 
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #ej10 button:hover {
-    background-color: #218838; 
-  }
+.columna.ejercicio10,
+.js10,
+.html10 {
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#ej10 button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ej10 button:hover {
+  background-color: #218838;
+}
