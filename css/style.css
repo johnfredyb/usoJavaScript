@@ -12,6 +12,27 @@ header {
     color: white;
     text-align: center;
 }
+nav.guia {
+    background-color: #2a3f54;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  pre {
+    background-color: #e3e7ed;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  code {
+    font-family: Consolas, monospace;
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  h1, h2, h3 {
+    color: #2a3f54;
+  }
 .nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
@@ -62,6 +83,13 @@ main {
     padding: 20px;
     border-radius: 8px;
 }
+.seccionguia{ 
+    background-color: #e5f7ef;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
 
 /* Contenedor de columnas */
 .contenedor {
