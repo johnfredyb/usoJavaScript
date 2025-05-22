@@ -157,6 +157,21 @@ img {
     background-color: #ffe6e6;
 }
 
+/*ejercicio 1 */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+
 /* Ejercicio 2 */
 #caja-diego {
     width: 300px;
@@ -213,6 +228,21 @@ img {
     background-color: #ffe6e6;
 }
 
+
+
+ /* Ejercicio 25*/
+ .carrusel {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+ 
+
 /* Ejercicio 28 */
 ej7{ font-family: Arial; margin: 20px; }
   .columna.ejercicio28 {
@@ -267,3 +297,6 @@ ej7{ font-family: Arial; margin: 20px; }
   #ej10 button:hover {
     background-color: #218838; 
   }
+
+ 
+
