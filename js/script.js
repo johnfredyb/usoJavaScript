@@ -1,4 +1,8 @@
 ///// Ejercicio #1
+function cambiarTexto() {
+  const titulo = document.getElementById("titulo");
+  titulo.textContent = "Bienvenido de nuevo";
+}
 
 ///// Ejercicio #2
 const caja = document.getElementById("caja-diego");
@@ -93,13 +97,35 @@ function validarFormulario() {
 
 ///// Ejercicio #7
 
+// Definimos una constante para el mínimo de caracteres
+const MINIMO_CARACTERES = 3 ;
+
 document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("btnComentario")
     .addEventListener("click", agregarComentario);
+  document.getElementById("btnComentario").addEventListener("click", agregarComentario);
   document.getElementById("btnImagen").addEventListener("click", agregarImagen);
   document.getElementById("btnItem").addEventListener("click", agregarItem);
+  // ejercicio #9
+  document.getElementById('validateFormEj9').addEventListener('submit', validarFormularioEj9);
+  // ejercicio #17
+  document.getElementById('btnSumar').addEventListener('click', actionSuma);
+  document.getElementById('btnSaludar').addEventListener('click', saludar);
 });
+
+const actionSuma = (evento) => {
+  evento.preventDefault();
+  const num1 = parseInt(document.getElementById('fnumber').value, 10);
+  const num2 = parseInt(document.getElementById('snumber').value, 10);
+  const result = document.getElementById('resultado');
+
+  result.value = sumarArrow(num1, num2);
+}
+
+const sumarArrow = (a, b) => a + b;
+const saludar = () => alert(`Bienvenido`);
+
 
 function agregarComentario() {
   const texto = document.getElementById("inputComentario").value;
@@ -133,6 +159,36 @@ function agregarItem() {
     document.getElementById("inputItem").value = "";
   }
 }
+
+// Ejercicio #9
+
+function validarFormularioEj9(evento) {
+  evento.preventDefault();
+  const usuario = document.getElementById('fname').value;
+  const apellido = document.getElementById('lname').value;
+  const email = document.getElementById('email').value;
+
+  if (usuario.length < MINIMO_CARACTERES) {
+      alert('El nombre no es válido');
+      return;
+  }
+  if (apellido.length < MINIMO_CARACTERES) {
+      alert('El apellido no es válido');
+      return;
+  }
+  if (email.length < MINIMO_CARACTERES) {
+      alert('El email no es válido');
+      return;
+  }
+  if (!email.includes('@')) {
+      alert('El email no es válido');
+      return;
+  }
+
+  alert(enviar(usuario));
+}
+
+const enviar = (nombre) => `Hola ${nombre}, el formulario se ha enviado correctamente`;
 
 ///// Ejercicio #10
 function verificar10() {
@@ -386,6 +442,34 @@ imagen.addEventListener("click", () => {
   indice = (indice + 1) % imagenes.length;
   imagen.src = imagenes[indice];
 });
+
+
+///// Ejercicio #25
+const imageness= [
+  "./img/1.jpg",
+  "./img/2.gif",
+  "./img/3.webp",
+  "./img/4.jpg",
+];
+
+let indiceActual = 0;
+
+function mostrarImagen() {
+  const img = document.getElementById("imagen");
+  img.src = imageness[indiceActual];
+}
+
+function siguiente() {
+  indiceActual = (indiceActual + 1) % imagenes.length;
+  mostrarImagen();
+}
+
+function anterior() {
+  indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+  mostrarImagen();
+}
+
+
 
 //// Ejercicio #28
 

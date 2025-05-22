@@ -1,0 +1,149 @@
+<!-- Guía: Cómo integrar lógica JavaScript en páginas HTML -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guía: Integrar JS en HTML</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+    <nav class="guia">
+        <ul class="nav-grid">
+            <li><a href="../index.html">Volver a inicio</a></li>
+        </ul>
+    </nav>
+    <section id="guia" class="seccionguia">
+    <h1>Guía: Cómo integrar lógica JavaScript en páginas HTML</h1>
+
+    <h2>1. ¿Qué es JavaScript en HTML?</h2>
+    <p>JavaScript permite hacer que las páginas HTML sean interactivas. Puedes responder a eventos, cambiar contenido,
+        validar formularios, y mucho más.</p>
+
+    <h2>2. Formas de integrar JavaScript en una página</h2>
+    <p><strong>A. Dentro del HTML (script embebido):</strong></p>
+    <pre>
+&lt;script&gt;
+  alert('Hola desde JavaScript!');
+&lt;/script&gt;
+  </pre>
+
+    <p><strong>B. Desde un archivo externo:</strong></p>
+    <pre>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+  </pre>
+
+    <h2>3. Ubicación recomendada del script</h2>
+    <p>Coloca el script justo antes de cerrar la etiqueta <code>&lt;/body&gt;</code> para asegurar que todos los
+        elementos HTML ya están cargados.</p>
+
+    <h2>4. Interacción con el DOM</h2>
+    <p>El DOM (Document Object Model) es una representación estructurada del contenido HTML de una página web.
+        JavaScript puede acceder a este modelo y manipularlo dinámicamente.</p>
+
+    <h3>¿Para qué sirve?</h3>
+    <ul>
+        <li><strong>Acceder</strong> a elementos del HTML mediante ID, clases o etiquetas.</li>
+        <li><strong>Modificar</strong> contenido textual, atributos o estilos.</li>
+        <li><strong>Crear</strong> y <strong>eliminar</strong> elementos dinámicamente.</li>
+    </ul>
+
+    <h3>¿Cómo funciona?</h3>
+    <p>El navegador interpreta el HTML y construye una estructura jerárquica de nodos. JS puede usar funciones como
+        <code>getElementById()</code>, <code>querySelector()</code> o <code>createElement()</code> para interactuar con
+        estos nodos.</p>
+
+    <h3>Ejemplo 1: Cambiar texto</h3>
+    <p><em>Obtiene un elemento con ID "mensaje" y cambia su contenido de texto.</em></p>
+    <pre>
+function cambiarTexto() {
+  document.getElementById("mensaje").textContent = "Texto cambiado";
+}
+  </pre>
+
+    <h3>Ejemplo 2: Cambiar estilos</h3>
+    <p><em>Modifica directamente el estilo de un elemento del DOM.</em></p>
+    <pre>
+function cambiarColor() {
+  document.getElementById("caja").style.backgroundColor = "blue";
+}
+  </pre>
+
+    <h3>Ejemplo 3: Crear un nuevo elemento</h3>
+    <p><em>Crea un nuevo ítem de lista y lo agrega al final de una lista existente.</em></p>
+    <pre>
+function agregarElemento() {
+  let li = document.createElement("li");
+  li.textContent = "Nuevo ítem";
+  document.getElementById("lista").appendChild(li);
+}
+  </pre>
+
+    <h2>5. Escuchar eventos con JS</h2>
+    <p>Un evento es una acción del usuario (clic, presionar una tecla, pasar el mouse, etc.). JavaScript puede
+        reaccionar a estos eventos usando <code>addEventListener</code>.</p>
+
+    <h3>¿Cómo funciona?</h3>
+    <p>Se selecciona un elemento del DOM y se le asocia un evento. Al dispararse ese evento, se ejecuta una función.</p>
+
+    <h3>Ejemplo 1: Evento de clic</h3>
+    <p><em>Al hacer clic en un botón, se muestra un mensaje.</em></p>
+    <pre>
+document.getElementById("boton").addEventListener("click", function() {
+  alert("¡Botón presionado!");
+});
+  </pre>
+
+    <h3>Ejemplo 2: Evento de teclado</h3>
+    <p><em>Detecta qué tecla se presiona en un campo de texto.</em></p>
+    <pre>
+document.getElementById("entrada").addEventListener("keyup", function(event) {
+  console.log("Tecla presionada: " + event.key);
+});
+  </pre>
+
+    <h3>Ejemplo 3: Evento al pasar el mouse</h3>
+    <p><em>Cambia el color del fondo al pasar el mouse sobre un elemento.</em></p>
+    <pre>
+document.getElementById("caja").addEventListener("mouseover", function() {
+  this.style.backgroundColor = "green";
+});
+  </pre>
+
+    <h2>6. Buenas prácticas</h2>
+    <ul>
+        <li>Separar HTML, CSS y JS en archivos distintos.</li>
+        <li>Usar nombres claros para funciones e IDs.</li>
+        <li>Evitar código duplicado.</li>
+        <li>Probar en varios navegadores.</li>
+    </ul>
+
+    <h2>7. Ejemplo completo</h2>
+    <pre>
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Mi página JS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id="saludo"&gt;Hola Mundo&lt;/h1&gt;
+  &lt;button onclick="saludar()"&gt;Haz clic&lt;/button&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+    <pre>
+// script.js
+function saludar() {
+  document.getElementById("saludo").textContent = "Hola desde JS externo!";
+}
+  </pre>
+    </section>
+</body>
+
+</html>

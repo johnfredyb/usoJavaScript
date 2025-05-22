@@ -12,6 +12,27 @@ header {
   color: white;
   text-align: center;
 }
+nav.guia {
+    background-color: #2a3f54;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  pre {
+    background-color: #e3e7ed;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  code {
+    font-family: Consolas, monospace;
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  h1, h2, h3 {
+    color: #2a3f54;
+  }
 .nav-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
@@ -97,6 +118,13 @@ main {
   padding: 20px;
   border-radius: 8px;
 }
+.seccionguia{ 
+    background-color: #e5f7ef;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
 
 /* Contenedor de columnas */
 .contenedor {
@@ -263,6 +291,21 @@ img {
   background-color: #90caf9;
 }
 
+/*ejercicio 1 */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+
 /* Ejercicio 2 */
 #caja-diego {
   width: 300px;
@@ -325,6 +368,21 @@ img {
   background-color: #ffe6e6;
 }
 
+
+
+ /* Ejercicio 25*/
+ .carrusel {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+ 
+
 /* Ejercicio 28 */
 ej7 {
   font-family: Arial;
@@ -383,3 +441,29 @@ ej7 {
 #ej10 button:hover {
   background-color: #218838;
 }
+.columna.ejercicio10, .js10, .html10 {
+    background-color: cadetblue; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+ 
+  #ej10 button {
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #ej10 button:hover {
+    background-color: #218838; 
+  }
+
+ 
+
